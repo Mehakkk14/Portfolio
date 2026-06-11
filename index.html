@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0f">
+  <meta name="description" content="Mahak Rastogi – Final Year Computer Science Engineering Student, Blockchain Developer, and Full Stack Developer. Explore my projects, experience, and certifications.">
+  <meta name="author" content="Mahak Rastogi">
+  <meta name="keywords" content="Mahak Rastogi, Portfolio, Blockchain Developer, Full Stack Developer, Web Developer, Computer Science">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Mahak Rastogi | Portfolio">
+  <meta property="og:description" content="Final Year CSE Student | Blockchain Developer | Full Stack Developer – Explore my projects, experience, and certifications.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mahakrastogi.dev">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta property="og:locale" content="en_US">
+
+  <title>Mahak Rastogi | Portfolio</title>
+
+  <!-- Google Fonts – Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== LOADING SCREEN ===================== -->
+  <div id="loading-screen" class="loading-screen" aria-label="Loading">
+    <div class="loader-content">
+      <div class="loader-initials">MR</div>
+      <div class="loader-bar">
+        <div class="loader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header>
+    <nav id="navbar" class="navbar" role="navigation" aria-label="Main Navigation">
+      <a href="#home" class="nav-logo" aria-label="Home – Mahak Rastogi">MR</a>
+
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="Resume - MAHAK RASTOGI.pdf" download="Resume - MAHAK RASTOGI.pdf" class="nav-link"><i class="fa-solid fa-download" aria-hidden="true" style="margin-right: 4px;"></i>Resume</a></li>
+      </ul>
+
+      <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO SECTION ===================== -->
+    <section id="home" class="hero-section">
+      <!-- Creative Background Doodles -->
+      <div class="doodle-container" aria-hidden="true">
+        <!-- Brackets { } -->
+        <div class="floating-doodle doodle-1">
+          <svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3a4 4 0 0 1-4 4 4 4 0 0 1 4 4v3a2 2 0 0 0 2 2h3m8-18h3a2 2 0 0 1 2 2v3a4 4 0 0 0 4 4 4 4 0 0 0-4 4v3a2 2 0 0 1-2 2h-3"/></svg>
+        </div>
+        <!-- Sparkle/Star -->
+        <div class="floating-doodle doodle-2">
+          <svg viewBox="0 0 24 24"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9Z"/></svg>
+        </div>
+        <!-- Code tag <> -->
+        <div class="floating-doodle doodle-3">
+          <svg viewBox="0 0 24 24"><path d="M8 6l-6 6l6 6m8-12l6 6l-6 6"/></svg>
+        </div>
+        <!-- Arrow -->
+        <div class="floating-doodle doodle-4">
+          <svg viewBox="0 0 24 24"><path d="M3 12h18m-6-6l6 6l-6 6"/></svg>
+        </div>
+        <!-- Lightbulb -->
+        <div class="floating-doodle doodle-5">
+          <svg viewBox="0 0 24 24"><path d="M9 18h6m-3-15a6 6 0 0 1 6 6c0 2.25-1.5 4.5-3 5.5v2.5a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2V14.5c-1.5-1-3-3.25-3-5.5a6 6 0 0 1 6-6Z"/></svg>
+        </div>
+        <!-- Swirl -->
+        <div class="floating-doodle doodle-6">
+          <svg viewBox="0 0 24 24"><path d="M3 12c4-8 8-8 12 0s8 8 6 0"/></svg>
+        </div>
+      </div>
+
+      <div class="hero-wrapper">
+        <div class="hero-content fade-in-up">
+          <p class="hero-greeting">Hello, I am</p>
+          <h1 class="hero-name gradient-text">Mahak Rastogi</h1>
+          <p class="hero-designation">Final Year CSE Student | <span class="typing-text"></span><span class="typing-cursor" aria-hidden="true">|</span></p>
+          <p class="hero-intro">
+            I am a Final Year Computer Science Engineering student with hands-on experience in blockchain development, full-stack web applications, and real-world client projects. I have built and deployed secure digital solutions ranging from decentralized applications to business websites serving real organizations.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projects" id="cta-projects" class="btn btn-primary">View Projects</a>
+            <a href="Resume - MAHAK RASTOGI.pdf" download="Resume - MAHAK RASTOGI.pdf" id="cta-resume" class="btn btn-outline">
+              <i class="fa-solid fa-download" aria-hidden="true"></i> Download Resume
+            </a>
+          </div>
+
+          <div class="hero-location">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span>Lucknow, Uttar Pradesh, India</span>
+          </div>
+        </div>
+
+        <div class="hero-image fade-in-up">
+          <div class="profile-photo-wrapper">
+            <div class="profile-photo-ring" aria-hidden="true"></div>
+            <div class="profile-photo-ring profile-photo-ring--inner" aria-hidden="true"></div>
+            <img src="assets/profile.jpg" alt="Mahak Rastogi - Profile Photo" class="profile-photo" loading="eager">
+            <div class="profile-photo-glow" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT SECTION ===================== -->
+    <section id="about" class="about-section section">
+      <!-- Creative Background Doodles -->
+      <div class="doodle-container" aria-hidden="true">
+        <div class="floating-doodle doodle-3" style="top: 10%; right: 5%;">
+          <svg viewBox="0 0 24 24"><path d="M8 6l-6 6l6 6m8-12l6 6l-6 6"/></svg>
+        </div>
+        <div class="floating-doodle doodle-2" style="bottom: 15%; left: 8%;">
+          <svg viewBox="0 0 24 24"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9Z"/></svg>
+        </div>
+        <div class="floating-doodle doodle-5" style="top: 40%; left: 12%;">
+          <svg viewBox="0 0 24 24"><path d="M9 18h6m-3-15a6 6 0 0 1 6 6c0 2.25-1.5 4.5-3 5.5v2.5a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2V14.5c-1.5-1-3-3.25-3-5.5a6 6 0 0 1 6-6Z"/></svg>
+        </div>
+        <div class="floating-doodle doodle-6" style="bottom: 30%; right: 15%;">
+          <svg viewBox="0 0 24 24"><path d="M3 12c4-8 8-8 12 0s8 8 6 0"/></svg>
+        </div>
+      </div>
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h2 class="section-title">About Me</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="about-text fade-in-up">
+          <p>
+            I am a technology enthusiast who enjoys transforming ideas into functional products that create real value. Throughout my academic journey, I have worked on blockchain-powered applications, client-focused business websites, and full-stack development projects that emphasize security, performance, and user experience. My interests lie in Blockchain, Web3, Full-Stack Development, and emerging technologies. Beyond technical development, I actively participate in professional communities through IEEE and the Soft Computing Research Society, where I collaborate with peers, engage in research discussions, and contribute to innovation-focused initiatives. I believe that continuous learning, practical implementation, and consistency are the keys to long-term success in technology.
+          </p>
+          <div style="margin-top: var(--space-lg); text-align: left;">
+            <a href="Resume - MAHAK RASTOGI.pdf" download="Resume - MAHAK RASTOGI.pdf" class="btn btn-primary">
+              <i class="fa-solid fa-download" aria-hidden="true"></i> Download Resume
+            </a>
+          </div>
+        </div>
+
+        <div class="about-cards">
+          <div class="glass-card fade-in-left">
+            <div class="card-icon">
+              <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+            </div>
+            <h3>Mission</h3>
+            <p>
+              To develop innovative, secure, and scalable technology solutions that solve meaningful real-world challenges while creating positive impact through software and decentralization.
+            </p>
+          </div>
+
+          <div class="glass-card fade-in-right">
+            <div class="card-icon">
+              <i class="fa-solid fa-binoculars" aria-hidden="true"></i>
+            </div>
+            <h3>Vision</h3>
+            <p>
+              To become a globally recognized technology leader and entrepreneur who builds transformative products at the intersection of software engineering, blockchain, and innovation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STATISTICS SECTION ===================== -->
+    <section id="stats" class="stats-section section">
+      <div class="container">
+        <div class="stats-grid fade-in-up">
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="fa-solid fa-code" aria-hidden="true"></i>
+            </div>
+            <span class="stat-number counter" data-target="4">0</span><span class="stat-suffix">+</span>
+            <p class="stat-label">Live Projects</p>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+            </div>
+            <span class="stat-number counter" data-target="10">0</span><span class="stat-suffix">+</span>
+            <p class="stat-label">Certifications</p>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+            </div>
+            <span class="stat-number counter" data-target="1">0</span>
+            <p class="stat-label">Internship</p>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="fa-solid fa-users" aria-hidden="true"></i>
+            </div>
+            <span class="stat-number counter" data-target="2">0</span>
+            <p class="stat-label">Leadership Roles</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS SECTION ===================== -->
+    <section id="projects" class="projects-section section">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h2 class="section-title">My Recent <span class="text-gold">Works</span></h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1 – DesignOPack -->
+          <article class="project-card fade-in-up" id="project-designopack">
+            <div class="project-icon">
+              <i class="fa-solid fa-box-open" aria-hidden="true"></i>
+            </div>
+            <h3 class="project-title">DesignOPack</h3>
+            <p class="project-description">
+              A complete business website developed for a 15-year-old luxury packaging brand. The project included business-focused design, SEO optimization, admin functionality, and deployment for real-world operations.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">GitHub</span>
+            </div>
+            <a href="https://designopack.com" target="_blank" rel="noopener noreferrer" class="btn btn-small" id="link-designopack">
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Site
+            </a>
+          </article>
+
+          <!-- Project 2 – TrustPay -->
+          <article class="project-card fade-in-up" id="project-trustpay">
+            <div class="project-icon">
+              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            </div>
+            <h3 class="project-title">TrustPay</h3>
+            <p class="project-description">
+              Blockchain-powered escrow application developed to enable secure transactions between freelancers and clients while improving trust and transparency.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Blockchain</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Web3</span>
+            </div>
+            <a href="https://trustpay2-0.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-small" id="link-trustpay">
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Site
+            </a>
+          </article>
+
+          <!-- Project 3 – MedLedger -->
+          <article class="project-card fade-in-up" id="project-medledger">
+            <div class="project-icon">
+              <i class="fa-solid fa-notes-medical" aria-hidden="true"></i>
+            </div>
+            <h3 class="project-title">MedLedger</h3>
+            <p class="project-description">
+              A blockchain-based medical records management platform focused on secure, tamper-resistant, and decentralized healthcare record handling.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Blockchain</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <a href="https://medledger-rho.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-small" id="link-medledger">
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Site
+            </a>
+          </article>
+
+          <!-- Project 4 – UniHostel -->
+          <article class="project-card fade-in-up" id="project-unihostel">
+            <div class="project-icon">
+              <i class="fa-solid fa-building" aria-hidden="true"></i>
+            </div>
+            <h3 class="project-title">UniHostel</h3>
+            <p class="project-description">
+              A hostel management solution designed to streamline accommodation processes and improve management efficiency through digital workflows.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Full Stack Development</span>
+              <span class="tag">Database Management</span>
+            </div>
+            <a href="https://unihostel.in" target="_blank" rel="noopener noreferrer" class="btn btn-small" id="link-unihostel">
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Site
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE SECTION ===================== -->
+    <section id="experience" class="experience-section section">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h2 class="section-title">Experience</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="timeline">
+
+          <!-- Experience 1 -->
+          <div class="timeline-item fade-in-left" id="exp-microsoft">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-icon">
+                <i class="fa-brands fa-microsoft" aria-hidden="true"></i>
+              </div>
+              <h3>Microsoft Elevate Internship – Power BI</h3>
+              <ul>
+                <li>Completed a 4-week internship focused on business intelligence and data analytics.</li>
+                <li>Worked with Power BI dashboards and data visualization.</li>
+                <li>Developed practical understanding of data-driven decision making.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience 2 -->
+          <div class="timeline-item fade-in-right" id="exp-ieee">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-icon">
+                <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+              </div>
+              <h3>IEEE Student Member</h3>
+              <ul>
+                <li>Participated in technical discussions, workshops, and innovation-focused events.</li>
+                <li>Collaborated with peers and professionals within the technology community.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience 3 -->
+          <div class="timeline-item fade-in-left" id="exp-scrs">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-icon">
+                <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+              </div>
+              <h3>Associate Coordinator – SCRS</h3>
+              <ul>
+                <li>Assisted in organizing technical events and research-oriented activities.</li>
+                <li>Promoted collaboration in AI, Soft Computing, and Emerging Technologies.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CERTIFICATIONS SECTION ===================== -->
+    <section id="certifications" class="certifications-section section">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h2 class="section-title">Certifications</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="certifications-grid">
+
+          <div class="cert-card fade-in-up clickable" id="cert-microsoft" data-certificate="Certificates/microsoft.jpeg">
+            <div class="cert-icon"><i class="fa-brands fa-microsoft" aria-hidden="true"></i></div>
+            <p>Microsoft Elevate Internship Completion</p>
+          </div>
+
+          <div class="cert-card fade-in-up clickable" id="cert-infosys" data-certificate="Certificates/infosys.png">
+            <div class="cert-icon"><i class="fa-solid fa-seedling" aria-hidden="true"></i></div>
+            <p>Infosys Springboard Pragati – Cohort 8</p>
+          </div>
+
+          <div class="cert-card fade-in-up clickable" id="cert-ibm-web" data-certificate="Certificates/ibm web dev.jpeg">
+            <div class="cert-icon"><i class="fa-solid fa-globe" aria-hidden="true"></i></div>
+            <p>IBM Web Development Basics</p>
+          </div>
+
+          <div class="cert-card fade-in-up clickable" id="cert-ibm-dataviz" data-certificate="Certificates/dvup ibm.jpeg">
+            <div class="cert-icon"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i></div>
+            <p>IBM Data Visualization Using Python</p>
+          </div>
+
+          <div class="cert-card fade-in-up clickable" id="cert-google-analytics" data-certificate="Certificates/google analytics.jpeg">
+            <div class="cert-icon"><i class="fa-brands fa-google" aria-hidden="true"></i></div>
+            <p>Google Analytics for Beginners</p>
+          </div>
+
+          <div class="cert-card fade-in-up clickable" id="cert-ibm-iot" data-certificate="Certificates/iot ibm.jpeg">
+            <div class="cert-icon"><i class="fa-solid fa-microchip" aria-hidden="true"></i></div>
+            <p>IBM IoT with Watson, Swift &amp; Node-RED</p>
+          </div>
+
+          <div class="cert-card fade-in-up clickable" id="cert-ai-impact" data-certificate="Certificates/apac.jpeg">
+            <div class="cert-icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></div>
+            <p>AI for Impact APAC Hackathon</p>
+          </div>
+
+          <div class="cert-card fade-in-up clickable" id="cert-kalpathon" data-certificate="Certificates/kalpathon.jpeg">
+            <div class="cert-icon"><i class="fa-solid fa-trophy" aria-hidden="true"></i></div>
+            <p>Kalpathon 2025 Participation</p>
+          </div>
+
+          <div class="cert-card fade-in-up clickable" id="cert-jpmorgan" data-certificate="Certificates/investment banking.jpeg">
+            <div class="cert-icon"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></div>
+            <p>J.P. Morgan Investment Banking Job Simulation</p>
+          </div>
+
+          <div class="cert-card fade-in-up clickable" id="cert-tata" data-certificate="Certificates/tata cybersecurity.jpeg">
+            <div class="cert-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+            <p>Tata Cybersecurity Analyst Job Simulation</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ACHIEVEMENTS SECTION ===================== -->
+    <section id="achievements" class="achievements-section section">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h2 class="section-title">Achievements</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="achievements-list">
+
+          <div class="achievement-item fade-in-up">
+            <div class="achievement-icon"><i class="fa-solid fa-trophy" aria-hidden="true"></i></div>
+            <p>Selected for Infosys Springboard Pragati: Path to Future – Cohort 8.</p>
+          </div>
+
+          <div class="achievement-item fade-in-up">
+            <div class="achievement-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+            <p>Successfully completed Microsoft Elevate Internship.</p>
+          </div>
+
+          <div class="achievement-item fade-in-up">
+            <div class="achievement-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+            <p>Participated in Google AI for Impact APAC Hackathon.</p>
+          </div>
+
+          <div class="achievement-item fade-in-up">
+            <div class="achievement-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+            <p>Active IEEE Student Member.</p>
+          </div>
+
+          <div class="achievement-item fade-in-up">
+            <div class="achievement-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+            <p>Associate Coordinator at Soft Computing Research Society.</p>
+          </div>
+
+          <div class="achievement-item fade-in-up">
+            <div class="achievement-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+            <p>Built and deployed multiple live projects.</p>
+          </div>
+
+          <div class="achievement-item fade-in-up">
+            <div class="achievement-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+            <p>Developed real-world client website solutions.</p>
+          </div>
+
+          <div class="achievement-item fade-in-up">
+            <div class="achievement-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+            <p>Built blockchain-based applications focused on security and transparency.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT SECTION ===================== -->
+    <section id="contact" class="contact-section section">
+      <!-- Creative Background Doodles -->
+      <div class="doodle-container" aria-hidden="true">
+        <div class="floating-doodle doodle-1" style="top: 10%; left: 15%;">
+          <svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3a4 4 0 0 1-4 4 4 4 0 0 1 4 4v3a2 2 0 0 0 2 2h3m8-18h3a2 2 0 0 1 2 2v3a4 4 0 0 0 4 4 4 4 0 0 0-4 4v3a2 2 0 0 1-2 2h-3"/></svg>
+        </div>
+        <div class="floating-doodle doodle-4" style="bottom: 25%; right: 12%;">
+          <svg viewBox="0 0 24 24"><path d="M3 12h18m-6-6l6 6l-6 6"/></svg>
+        </div>
+        <div class="floating-doodle doodle-2" style="top: 45%; right: 8%;">
+          <svg viewBox="0 0 24 24"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9Z"/></svg>
+        </div>
+        <div class="floating-doodle doodle-3" style="bottom: 10%; left: 8%;">
+          <svg viewBox="0 0 24 24"><path d="M8 6l-6 6l6 6m8-12l6 6l-6 6"/></svg>
+        </div>
+      </div>
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h2 class="section-title">Got a Project in <span class="text-gold">Mind?</span></h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="contact-wrapper">
+
+          <!-- Contact Info -->
+          <div class="contact-info fade-in-left">
+
+            <div class="contact-card" id="contact-email">
+              <div class="contact-card-icon">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </div>
+              <div class="contact-card-details">
+                <h4>Email</h4>
+                <a href="mailto:rastogimehak3845@gmail.com">rastogimehak3845@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-card" id="contact-location">
+              <div class="contact-card-icon">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              </div>
+              <div class="contact-card-details">
+                <h4>Location</h4>
+                <p>Lucknow, Uttar Pradesh, India</p>
+              </div>
+            </div>
+
+            <div class="contact-socials" id="contact-socials">
+              <a href="https://www.linkedin.com/in/mahak-rastogi14/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="https://github.com/Mehakkk14" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Contact Form -->
+          <form id="contact-form" class="contact-form fade-in-right" action="#" method="POST" autocomplete="on">
+            <div class="form-group">
+              <label for="form-name" class="sr-only">Name</label>
+              <input type="text" id="form-name" name="name" placeholder="Your Name" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="form-email" class="sr-only">Email</label>
+              <input type="email" id="form-email" name="email" placeholder="Your Email" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="form-subject" class="sr-only">Subject</label>
+              <input type="text" id="form-subject" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <label for="form-message" class="sr-only">Message</label>
+              <textarea id="form-message" name="message" rows="6" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" id="form-submit" class="btn btn-primary">
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send Message
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo" aria-label="Home – Mahak Rastogi">MR</a>
+          <p class="footer-tagline">
+            Building secure blockchain solutions, scalable web applications, and impactful digital products for the future.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <div class="footer-social-icons">
+            <a href="https://www.linkedin.com/in/mahak-rastogi14/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="https://github.com/Mehakkk14" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:rastogimehak3845@gmail.com" aria-label="Email">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mahak Rastogi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Certificate Modal Lightbox -->
+  <div id="cert-modal" class="cert-modal" aria-hidden="true" role="dialog" aria-labelledby="cert-modal-caption">
+    <button class="cert-modal-close" aria-label="Close certificate">&times;</button>
+    <div class="cert-modal-content">
+      <img id="cert-modal-img" src="" alt="Certificate View">
+      <p id="cert-modal-caption" class="cert-modal-caption"></p>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
