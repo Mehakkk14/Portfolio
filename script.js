@@ -434,9 +434,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // EmailJS CONFIGURATION
     // Replace placeholders with actual credentials from EmailJS dashboard
     // ============================================================
-    const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY"; // e.g. "user_xxxxxxxxxxxxxx"
-    const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID"; // e.g. "service_xxxxxxx"
-    const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // e.g. "template_xxxxxxx"
+    const EMAILJS_PUBLIC_KEY = "KfotJLzH0unX_coVG"; // e.g. "user_xxxxxxxxxxxxxx"
+    const EMAILJS_SERVICE_ID = "service_3uux8c6"; // e.g. "service_xxxxxxx"
+    const EMAILJS_TEMPLATE_ID = "template_ix0saks"; // e.g. "template_xxxxxxx"
 
     // Check if EmailJS is loaded and configured
     if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY") {
@@ -475,7 +475,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Disable submit button and show loading state
       const submitBtn = $('#form-submit', form) || form.querySelector('button[type="submit"]');
       const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Send Message';
-      
+
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin" style="margin-right: 8px;"></i>Sending...';
@@ -701,7 +701,7 @@ document.addEventListener('DOMContentLoaded', () => {
       modal.classList.remove('active');
       modal.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = ''; // restore scrolling
-      
+
       // Clear image source after transition finishes to avoid flash on next open
       setTimeout(() => {
         if (!modal.classList.contains('active')) {
@@ -712,7 +712,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     certCards.forEach((card) => {
       card.addEventListener('click', () => openModal(card));
-      
+
       // Accessibility: support keyboard trigger (Enter/Space)
       card.setAttribute('tabindex', '0');
       card.setAttribute('role', 'button');
