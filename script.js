@@ -430,6 +430,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = $('#contact-form') || $('form.contact-form') || $('form');
     if (!form) return;
 
+    // ============================================================
+    // EmailJS CONFIGURATION
+    // Replace placeholders with actual credentials from EmailJS dashboard
+    // ============================================================
+    const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY"; // e.g. "user_xxxxxxxxxxxxxx"
+    const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID"; // e.g. "service_xxxxxxx"
+    const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // e.g. "template_xxxxxxx"
+
+    // Check if EmailJS is loaded and configured
+    if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY") {
+      emailjs.init({
+        publicKey: EMAILJS_PUBLIC_KEY,
+      });
+    }
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
@@ -438,7 +453,6 @@ document.addEventListener('DOMContentLoaded', () => {
       let isValid = true;
 
       inputs.forEach((input) => {
-        // Remove previous error states
         input.classList.remove('error');
 
         if (input.hasAttribute('required') && !input.value.trim()) {
@@ -446,7 +460,6 @@ document.addEventListener('DOMContentLoaded', () => {
           isValid = false;
         }
 
-        // Email pattern check
         if (
           input.type === 'email' &&
           input.value.trim() &&
@@ -459,31 +472,73 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!isValid) return;
 
-      // Show success message
-      let msg = form.querySelector('.form-success');
-      if (!msg) {
-        msg = document.createElement('div');
-        msg.className = 'form-success';
-        msg.innerHTML = `
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-            <polyline points="22 4 12 14.01 9 11.01"/>
-          </svg>
-          <span>Message sent successfully! I'll get back to you soon.</span>
-        `;
-        form.appendChild(msg);
+      // Disable submit button and show loading state
+      const submitBtn = $('#form-submit', form) || form.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Send Message';
+      
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin" style="margin-right: 8px;"></i>Sending...';
       }
 
-      // Trigger animation
-      requestAnimationFrame(() => msg.classList.add('show'));
+      // Helper to display styled messages
+      const showFeedback = (success, text) => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+        }
 
-      // Reset form
-      form.reset();
+        // Clean up previous messages
+        const prevMsg = form.querySelector('.form-success') || form.querySelector('.form-error');
+        if (prevMsg) prevMsg.remove();
 
-      // Hide success message after a few seconds
-      setTimeout(() => {
-        msg.classList.remove('show');
-      }, 5000);
+        const msg = document.createElement('div');
+        msg.className = success ? 'form-success' : 'form-error';
+        msg.innerHTML = success
+          ? `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+               <polyline points="22 4 12 14.01 9 11.01"/>
+             </svg>
+             <span>${text}</span>`
+          : `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+               <circle cx="12" cy="12" r="10"/>
+               <line x1="12" y1="8" x2="12" y2="12"/>
+               <line x1="12" y1="16" x2="12.01" y2="16"/>
+             </svg>
+             <span>${text}</span>`;
+
+        form.appendChild(msg);
+
+        // Trigger layout and transition
+        requestAnimationFrame(() => msg.classList.add('show'));
+
+        if (success) {
+          form.reset();
+        }
+
+        // Auto-dismiss after 6 seconds
+        setTimeout(() => {
+          msg.classList.remove('show');
+          setTimeout(() => msg.remove(), 400);
+        }, 6000);
+      };
+
+      // Send via EmailJS if credentials are provided
+      if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY") {
+        emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
+          .then(() => {
+            showFeedback(true, "Message sent successfully! I'll get back to you soon.");
+          })
+          .catch((error) => {
+            console.error("EmailJS Error:", error);
+            showFeedback(false, "Failed to send message. Please try again or email me directly.");
+          });
+      } else {
+        // Simulated feedback (if keys are still default placeholders)
+        setTimeout(() => {
+          showFeedback(true, "Simulated: Message sent successfully! (Note: Replace your EmailJS credentials in script.js to connect to the actual service).");
+        }, 1500);
+      }
     });
   };
 

@@ -3258,4 +3258,50 @@ section {
   }
 }
 
+/* ── Form Feedback Messages ── */
+.form-success,
+.form-error {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm, 0.5rem);
+  padding: 14px 18px;
+  border-radius: var(--radius-md, 12px);
+  font-size: var(--font-sm, 0.875rem);
+  font-weight: 500;
+  margin-top: var(--space-md, 1rem);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s var(--ease-out, ease-out), transform 0.4s var(--ease-out, ease-out);
+  width: 100%;
+}
+
+.form-success.show,
+.form-error.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.form-success {
+  background: rgba(0, 173, 181, 0.08);
+  border: 1px solid rgba(0, 173, 181, 0.2);
+  color: var(--gold-light, #33c2cc);
+}
+
+.form-success svg {
+  color: var(--gold-primary, #00adb5);
+  flex-shrink: 0;
+}
+
+.form-error {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #ff6b6b;
+}
+
+.form-error svg {
+  color: #ef4444;
+  flex-shrink: 0;
+}
+
+
 
