@@ -3303,5 +3303,452 @@ section {
   flex-shrink: 0;
 }
 
+/* ============================================================
+   31. SCROLL PROGRESS BAR
+   ============================================================ */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--gradient-gold-purple);
+  z-index: 10001;
+  transition: none;
+  box-shadow: 0 0 10px var(--gold-glow);
+}
+
+/* ============================================================
+   32. SKILLS SECTION
+   ============================================================ */
+.skills-section {
+  background: var(--gradient-section-alt, linear-gradient(180deg, #0a0a0f, #0d0d14));
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.skill-category-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition:
+    transform var(--duration-normal) var(--ease-out),
+    box-shadow var(--duration-normal) var(--ease-out),
+    border-color var(--duration-normal) var(--ease-out);
+}
+
+.skill-category-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, var(--gold-glow) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity var(--duration-normal) var(--ease-out);
+}
+
+.skill-category-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--border-gold);
+  box-shadow:
+    var(--shadow-lg),
+    0 0 40px var(--gold-glow);
+}
+
+.skill-category-card:hover::before {
+  opacity: 1;
+}
+
+.skill-category-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--space-lg);
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(0, 173, 181, 0.12), rgba(0, 229, 255, 0.08));
+  border: 1px solid var(--border-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-2xl);
+  color: var(--gold-primary);
+  position: relative;
+  z-index: 1;
+  transition: transform var(--duration-normal) var(--ease-spring);
+}
+
+.skill-category-card:hover .skill-category-icon {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.skill-category-title {
+  font-size: var(--font-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.skill-badge {
+  font-size: var(--font-xs);
+  font-weight: 600;
+  color: var(--gold-light);
+  background: rgba(0, 173, 181, 0.1);
+  border: 1px solid rgba(0, 173, 181, 0.2);
+  border-radius: var(--radius-pill);
+  padding: 6px 16px;
+  letter-spacing: 0.5px;
+  transition:
+    background var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-spring),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.skill-badge:hover {
+  background: rgba(0, 173, 181, 0.2);
+  border-color: var(--gold-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--gold-glow);
+}
+
+/* ============================================================
+   33. ENHANCED PROJECT CARDS
+   ============================================================ */
+.project-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+}
+
+.project-category {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  background: rgba(0, 173, 181, 0.05);
+  border: 1px solid rgba(0, 173, 181, 0.15);
+  border-radius: var(--radius-pill);
+  padding: 2px 8px;
+}
+
+.project-links {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: auto;
+  padding-top: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.project-links .btn-outline {
+  font-size: var(--font-xs);
+  padding: 8px 18px;
+}
+
+/* ============================================================
+   34. ENHANCED TIMELINE
+   ============================================================ */
+.timeline-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+}
+
+.timeline-date {
+  font-size: var(--font-xs);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  background: rgba(0, 173, 181, 0.08);
+  border: 1px solid rgba(0, 173, 181, 0.15);
+  border-radius: var(--radius-pill);
+  padding: 4px 14px;
+}
+
+.timeline-company {
+  font-size: var(--font-sm);
+  color: var(--purple-bright);
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+}
+
+.timeline-tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* ============================================================
+   35. ENHANCED CERTIFICATIONS
+   ============================================================ */
+.cert-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cert-title {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.cert-issuer {
+  font-size: var(--font-xs);
+  color: var(--gold-primary);
+  font-weight: 500;
+}
+
+/* ============================================================
+   36. GITHUB STATS SECTION
+   ============================================================ */
+.github-section {
+  background: var(--gradient-section, linear-gradient(180deg, #0d0d14, #0a0a0f));
+}
+
+.github-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.github-stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform var(--duration-normal) var(--ease-out),
+    border-color var(--duration-normal) var(--ease-out),
+    box-shadow var(--duration-normal) var(--ease-out);
+}
+
+.github-stat-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-gold);
+  box-shadow:
+    var(--shadow-lg),
+    0 0 30px var(--gold-glow);
+}
+
+.github-stat-card img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+}
+
+.github-profile-cta {
+  text-align: center;
+}
+
+/* ============================================================
+   37. CONTACT TAGLINE
+   ============================================================ */
+.contact-tagline {
+  font-size: var(--font-md);
+  color: var(--text-secondary);
+  max-width: 560px;
+  margin: var(--space-md) auto 0;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* ============================================================
+   38. ENHANCED MICRO-INTERACTIONS
+   ============================================================ */
+
+/* Glass card icon animation */
+.glass-card .card-icon {
+  transition: transform var(--duration-normal) var(--ease-spring);
+}
+
+.glass-card:hover .card-icon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+/* Smooth link underline on contact details */
+.contact-card-details a {
+  position: relative;
+}
+
+.contact-card-details a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold-primary);
+  transition: width var(--duration-normal) var(--ease-out);
+}
+
+.contact-card-details a:hover::after {
+  width: 100%;
+}
+
+/* Enhanced stat items */
+.stat-item {
+  transition: transform var(--duration-normal) var(--ease-out);
+}
+
+.stat-item:hover {
+  transform: translateY(-4px);
+}
+
+.stat-icon {
+  transition: transform var(--duration-normal) var(--ease-spring);
+}
+
+.stat-item:hover .stat-icon {
+  transform: scale(1.2);
+}
+
+/* Achievement items glow on hover */
+.achievement-item {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-item:hover {
+  box-shadow: 0 4px 20px var(--gold-glow);
+}
+
+/* Footer social icons enhanced hover */
+.footer-social-icons a {
+  position: relative;
+}
+
+.footer-social-icons a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold-primary);
+  opacity: 0;
+  transition: opacity var(--duration-fast) var(--ease-out);
+}
+
+.footer-social-icons a:hover::after {
+  opacity: 1;
+}
+
+/* ============================================================
+   RESPONSIVE — Skills + GitHub for Tablet
+   ============================================================ */
+@media (max-width: 1199px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .github-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — Skills + GitHub for Mobile
+   ============================================================ */
+@media (max-width: 767px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .github-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .project-links .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .timeline-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+}
+
+/* ============================================================
+   39. PREMIUM PROJECT CARDS STYLES
+   Glowing borders, soft cyan drop shadows, and modern animations for all cards
+   ============================================================ */
+.project-card {
+  position: relative;
+  padding: 0 !important;
+  border-color: rgba(0, 173, 181, 0.35) !important;
+  box-shadow: 0 4px 30px rgba(0, 173, 181, 0.08) !important;
+  transition: transform var(--duration-normal) var(--ease-out), 
+              border-color var(--duration-normal) var(--ease-out), 
+              box-shadow var(--duration-normal) var(--ease-out) !important;
+}
+
+.project-card::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--gold-primary), var(--purple-bright));
+  z-index: -1;
+  opacity: 0.12;
+  transition: opacity var(--duration-normal) var(--ease-out);
+  pointer-events: none;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.015) !important;
+  border-color: var(--gold-primary) !important;
+  box-shadow: 0 15px 40px rgba(0, 173, 181, 0.25), 0 0 25px rgba(0, 229, 255, 0.15) !important;
+}
+
+.project-card:hover::after {
+  opacity: 0.3;
+}
+
 
 
